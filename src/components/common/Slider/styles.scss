@@ -1,0 +1,34 @@
+.img{
+  display: none;
+  img{
+    width: 500px;
+    height: 300px;
+  }
+}
+
+.active{
+  display: block;
+}
+
+.fullscreen-enabled .img img {
+  width: 100%;
+  height: 100%;
+
+}
+
+//img {
+//  animation-duration: 3s;
+//  animation-name: slideIn;
+//}
+//
+//@keyframes slideIn {
+//  from {
+//    margin-left: 10%;
+//    //width: 300%;
+//  }
+//
+//  to {
+//    margin-left: 0%;
+//    //width: 100%;
+//  }
+//}
