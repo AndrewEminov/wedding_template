@@ -1,10 +1,10 @@
 import React from 'react';
 
-function LogoComponent({linkImageClass, imageClass, imageContent}) {
+function LogoComponent({linkImgClass, linkImgHref, imageClass, srcImage}) {
 
     return (
-        <a className={linkImageClass} href={'/'}>
-            <img className={imageClass} src={imageContent} alt=""/>
+        <a className={linkImgClass} >
+            <img className={imageClass} src={srcImage} alt=""/>
         </a>
     );
 }

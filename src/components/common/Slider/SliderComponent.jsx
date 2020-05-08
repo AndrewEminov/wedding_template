@@ -5,66 +5,58 @@ import './styles.scss';
 
 import Fullscreen from "react-full-screen";
 
-
-function SliderComponent({imageClass, ContainerImageClass, imageSrc}) {
+function SliderComponent({step, counter, length, imageSlides, SliderClass, wrapperSlidesClass, sliderBtnsClass}) {
 
     const [isFull, setIsFull] = useState(false);
-
     const goFull = () => {
         setIsFull(true);
     };
 
-    const [length, setLength] = useState(3);
-    const [counter, setCounter] = useState(1);
+    const [cLength, setLength] = useState(length);
+    const [cCounter, setCounter] = useState(counter);
 
     const slider = useRef(null);
 
     const changeSlide = (currentCount, slideRef, btn) => {
 
         if (btn === 'next'){
-            if (slideRef.childNodes[counter] === undefined){
-                slideRef.childNodes[counter - 1].classList.remove("active");
+            if (slideRef.childNodes[cCounter] === undefined){
+                slideRef.childNodes[cCounter - 1].classList.remove("active");
                 slideRef.childNodes[0].classList.add("active");
             }else {
-                slideRef.childNodes[counter - 1].classList.remove("active");
-                slideRef.childNodes[counter].classList.add("active");
+                slideRef.childNodes[cCounter - 1].classList.remove("active");
+                slideRef.childNodes[cCounter].classList.add("active");
             }
         }else {
-            if (slideRef.childNodes[counter-2] === undefined) {
-                slideRef.childNodes[counter-1].classList.remove("active");
-                slideRef.childNodes[length-1].classList.add("active");
+            if (slideRef.childNodes[cCounter-2] === undefined) {
+                slideRef.childNodes[cCounter-1].classList.remove("active");
+                slideRef.childNodes[cLength-1].classList.add("active");
             }else {
-                slideRef.childNodes[counter-1].classList.remove("active");
-                slideRef.childNodes[counter-2].classList.add("active");
+                slideRef.childNodes[cCounter-1].classList.remove("active");
+                slideRef.childNodes[cCounter-2].classList.add("active");
             }
         }
 
         setCounter(currentCount);
-
-        //setStatus('resolve');
     };
-
     return (
-
-        <div className={'Slider'}>
+        <div className={SliderClass}>
             <Fullscreen
             enabled={isFull}
             onChange={isFull => setIsFull(isFull)}
             >
-                <div ref={slider}  className={'wrapperSlides'}>
-                    <ImageComponent imageSrc={'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'} imageClass={''} ContainerImageClass={`img active`}/>
-                    <ImageComponent imageSrc={'https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg'} imageClass={''} ContainerImageClass={`img`}/>
-                    <ImageComponent imageSrc={'https://static.toiimg.com/photo/72975551.cms'} imageClass={''} ContainerImageClass={`img`}/>
+                <div ref={slider}  className={wrapperSlidesClass}>
+                    {imageSlides && imageSlides.map((item, index)=>
+                        <ImageComponent imageSrc={item.src} imageClass={item.imgClass} ContainerImageClass={`img ${index===0 ? 'active' : ''}`}/>
+                    )}
                 </div>
             </Fullscreen>
 
-            <div className={'sliderBtns'}>
-                <SlideSwitch changeSlide={changeSlide} slideRef={slider} length={length} counter={counter} step={1}/>
+            <div className={sliderBtnsClass}>
+                <SlideSwitch changeSlide={changeSlide} slideRef={slider} length={cLength} counter={cCounter} step={step}/>
                 <button onClick={goFull} className={'fullscreen'}>X</button>
             </div>
         </div>
-
     );
 }
-
 export default SliderComponent;

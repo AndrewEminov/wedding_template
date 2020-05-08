@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MenuComponent({MenuList, menuClass, menuItemClass, menuItemHref}) {
+function MenuComponent({MenuList, menuClass, menuItemClass}) {
 
     const handleMenuClick = () => {
 
@@ -8,8 +8,8 @@ function MenuComponent({MenuList, menuClass, menuItemClass, menuItemHref}) {
 
     return (
         <ul className={menuClass}>
-            {MenuList.map((value)=>
-                <li className={menuItemClass} onClick={handleMenuClick}><a href={menuItemHref}>{value}</a></li>
+            {MenuList && MenuList.map((item)=>
+                <li className={menuItemClass} onClick={handleMenuClick}><a href={item.href}>{item.value}</a></li>
             )}
         </ul>
     );
