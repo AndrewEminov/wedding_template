@@ -1,12 +1,20 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function ImageComponent({imageClass, ContainerImageClass, imageSrc}) {
 
 
     return (
         <div className={ContainerImageClass}>
-            <img className={imageClass} src={imageSrc} alt={'image'}/>
+
+            <LazyLoadImage
+                wrapperClassName={'imageContainer'}
+                alt={'image'}
+                effect="blur"
+                src={imageSrc} />
+
+            {/*<img className={imageClass} src={imageSrc} alt={'image'}/>*/}
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function SlideSwitch({counter, changeSlide, length, slideRef, step}) {
+function SlideSwitch({counter, changeSlide, length, slideRef, step, rightImage, leftImage}) {
 
     const handleClickPrev = () => {
 
@@ -22,10 +22,10 @@ function SlideSwitch({counter, changeSlide, length, slideRef, step}) {
     };
 
     return (
-        <div className={''}>
-            <button data-btn="prev" onClick={handleClickPrev}>{'<-'}</button>
-            <div>{counter}/{length}</div>
-            <button data-btn="next" onClick={handleClickNext}>{'->'}</button>
+        <div className={'wrapperBtns'}>
+            <button data-btn="prev" onClick={handleClickPrev}><img src={leftImage}  alt=""/></button>
+            <div className={'counter'}>{counter}/{length}</div>
+            <button data-btn="next" onClick={handleClickNext}><img src={rightImage} alt=""/></button>
         </div>
     );
 }
