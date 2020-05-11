@@ -1,11 +1,10 @@
 import React, {useEffect, useRef, useState} from 'react';
 import ImageComponent from "../ImageComponent";
 import SlideSwitch from "./SlideSwitch";
-import './styles.scss';
 
 import Fullscreen from "react-full-screen";
 
-function SliderComponent({step, counter, length, imageSlides, SliderClass, wrapperSlidesClass, sliderBtnsClass}) {
+function SliderComponent({step, counter, length, imageSlides, SliderClass, wrapperSlidesClass, sliderBtnsClass, leftIcon, rightIcon, fullscreenIcon}) {
 
     const [isFull, setIsFull] = useState(false);
     const goFull = () => {
@@ -47,14 +46,15 @@ function SliderComponent({step, counter, length, imageSlides, SliderClass, wrapp
             >
                 <div ref={slider}  className={wrapperSlidesClass}>
                     {imageSlides && imageSlides.map((item, index)=>
+
                         <ImageComponent imageSrc={item.src} imageClass={item.imgClass} ContainerImageClass={`img ${index===0 ? 'active' : ''}`}/>
                     )}
                 </div>
             </Fullscreen>
 
             <div className={sliderBtnsClass}>
-                <SlideSwitch changeSlide={changeSlide} slideRef={slider} length={cLength} counter={cCounter} step={step}/>
-                <button onClick={goFull} className={'fullscreen'}>X</button>
+                <SlideSwitch leftImage={leftIcon} rightImage={rightIcon} changeSlide={changeSlide} slideRef={slider} length={cLength} counter={cCounter} step={step}/>
+                <button onClick={goFull} className={'fullscreen-icon'}><img src={fullscreenIcon} alt=""/></button>
             </div>
         </div>
     );

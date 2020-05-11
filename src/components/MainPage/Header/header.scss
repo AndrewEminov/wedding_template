@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.header{
+  display: flex;
+  align-items: flex-start;
+  .headerContent{
+    width: 50%;
+    .wrapperMenu{
+      display: flex;
+      margin: 22px 45px 0 161px;
+    }
+    .wrapperContent{
+      margin: 233px 240px 257px 255px;
+    }
+  }
+  .headerSlider{
+    width: 45%;
+    margin-left: 25px;
+    position: relative;
+  }
+}
+
+.headerContent .wrapperMenu{
+  .menu{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    .menu_item{
+      padding-left: 65px;
+      a{
+        text-decoration: none;
+        color: #000000;
+        font-family: 'Chivo', sans-serif;
+        font-size: 16px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+.headerContent .wrapperContent {
+  .title{
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 64px;
+    padding-bottom: 26px;
+  }
+  .description{
+    font-family: 'Chivo', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 32px;
+    color: #263238;
+    padding-bottom: 57px;
+    letter-spacing: -0.15px;
+  }
+  .wrapperBtn{
+    display: flex;
+    .button_ContactUs{
+      font-family: 'Chivo', sans-serif;
+      width: 8em;
+      height: 2.7em;
+      box-shadow: 0 21.6667px 33.3333px rgba(19, 170, 87, 0.3);
+      background-color: #13AA57;
+      color: white;
+      text-decoration: none;
+      font-size: 30px;
+      line-height: 82px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .social_network{
+      display: flex;
+      align-items: center;
+      .link{
+        display: block;
+      }
+      .link.facebook{
+        margin-left: 38px;
+        width: 25px;
+        height: 25px;
+        background-image: url("../../../images/social network/4202107-facebook-fb-logo-social-social-media 1.png");
+      }
+      .link.instagram{
+        margin-left: 25px;
+        width: 25px;
+        height: 25px;
+        background-image: url("../../../images/social network/instagram-black 1.png");
+      }
+      .link.youtube{
+        margin-left: 28px;
+        width: 33px;
+        height: 24px;
+        background-image: url("../../../images/social network/youtube-black 1.png");
+
+      }
+    }
+  }
+}
+
+
+
+.headerSlider{
+
+  .headerSliderBtns{
+    width: 23.4%;
+    height: 66px;
+    background: #13AA57;
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    .wrapperBtns{
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      button{
+        background-color: initial;
+        border: none;
+      }
+      .counter{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 18.3566px;
+      }
+    }
+    .fullscreen-icon{
+      margin-left: 20px;
+      background-color: initial;
+      border: none;
+    }
+  }
+
+  .img.active{
+    display: block;
+  }
+  .img{
+    display: none;
+    .imageContainer{
+      width: 100%;
+    }
+    img{
+      width: 935px;
+      height: 940px;
+      overflow: hidden;
+    }
+  }
+
+  .fullscreen-enabled {
+
+    .active{
+      display: flex;
+      justify-content: center;
+    }
+    .imageContainer{
+      width: initial;
+    }
+    .img img {
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+}
+
+
+
+
+//img {
+//  animation-duration: 3s;
+//  animation-name: slideIn;
+//}
+//
+//@keyframes slideIn {
+//  from {
+//    margin-left: 10%;
+//    //width: 300%;
+//  }
+//
+//  to {
+//    margin-left: 0%;
+//    //width: 100%;
+//  }
+//}
