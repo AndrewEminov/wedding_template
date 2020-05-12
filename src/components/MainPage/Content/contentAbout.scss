@@ -1,0 +1,81 @@
+
+
+.containerAbout{
+  display: flex;
+
+  .contentAboutImg{
+    width: 51.3%;
+
+    .imageContainer{
+      width: 985px;
+      height: 795px;
+      overflow: hidden;
+    }
+  }
+
+  .contentAbout{
+    width: 45%;
+    position: relative;
+    .contentAboutMessage{
+      position: absolute;
+      left: -30%;
+      top: 17%;
+      background: #FFFFFF;
+      box-shadow: -1px 12px 23px rgba(0, 0, 0, 0.107654);
+      padding-left: 69px;
+    }
+  }
+}
+
+.contentAboutMessage{
+  width: 112%;
+
+  .linkAbout{
+    font-family: 'Chivo', sans-serif;
+    font-size: 15px;
+    line-height: 21px;
+    color: #13AA57;
+    padding-top: 67px;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+  }
+  .titleAbout{
+    font-family: 'Chivo', sans-serif;
+    font-size: 40px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-top: 17px;
+    letter-spacing: -1.7px;
+  }
+  .textAbout{
+    font-family: 'Chivo', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 29px;
+    color: #263238;
+    margin-top: 24px ;
+    padding-left: 25px;
+    padding-right: 114px;
+    letter-spacing: 0.4px;
+    border-left: 2px solid #000000;
+
+    p {
+      text-indent: 20px;
+    }
+  }
+  .btnAbout{
+    margin: 22px 0 64px;
+    font-family: 'Chivo', sans-serif;
+    text-transform: initial;
+    border-radius: initial;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+    border-color: #13AA57;
+    color: #13AA57;
+    padding: 12px 25px 13px 24px;
+  }
+}

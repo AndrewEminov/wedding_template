@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "./Header/Header";
 
 import  './mainPage_styles.scss';
+import ContentAbout from "./Content/ContentAbout";
 
 function MainPage() {
 
@@ -9,7 +10,8 @@ function MainPage() {
         <div className={'mainPage_container'}>
             <Header/>
             <div className={'content'}>
-                <div className={'content about'}></div>
+                <ContentAbout/>
+
                 <div className={'content offer'}></div>
                 {/*<div className={'content portfolio'}></div>*/}
                 {/*<div className={'content testimonials'}></div>*/}
