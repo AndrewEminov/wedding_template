@@ -26,13 +26,16 @@
     margin: 0;
     list-style-type: none;
     .menu_item{
-      padding-left: 65px;
+      &:nth-child(1){
+        padding-left: 68px;
+      }
+      padding-left: 60px;
       a{
         text-decoration: none;
         color: #000000;
         font-family: 'Chivo', sans-serif;
         font-size: 16px;
-        letter-spacing: -1px;
+        //letter-spacing: -1px;
       }
     }
   }
@@ -148,10 +151,12 @@
   }
 
   .fullscreen-enabled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .active{
-      display: flex;
-      justify-content: center;
+
     }
     .imageContainer{
       width: initial;

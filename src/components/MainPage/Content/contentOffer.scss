@@ -1,0 +1,132 @@
+.offerTitle{
+  font-family: 'Chivo', sans-serif;
+  font-size: 40px;
+  line-height: 54px;
+  font-weight: lighter;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 55px;
+  margin-left: 162px;
+}
+
+.containerOffer{
+  display: flex;
+  .contentOffer{
+    width: 50%;
+  }
+  .contentOfferImg{
+    margin-left: 25px;
+    width: 45%;
+  }
+}
+
+.containerInfoOffer{
+  position: relative;
+  margin-top: 55px;
+  margin-left: 163px;
+  display: grid;
+  grid-column-gap: 56px;
+  grid-row-gap: 65px;
+  grid-template-columns: 43% 43%;
+
+  .infoBlockOffer.extend{
+    padding: 19px 47px 25px 47px;
+    width: 816px;
+    z-index: 1;
+    background: #FFFFFF;
+    box-shadow: -1px 12px 23px rgba(0, 0, 0, 0.107654);
+
+    position: absolute;
+    bottom: -282px;
+    left: -50px;
+
+    border-bottom: 7px solid #13AA57;
+
+    .infoWrapper{
+      padding-left: 10px;
+    }
+
+    .iconWrapper {
+      margin-right: 16px;
+
+      .line {
+        border-right: 3px solid #263238;
+        height: 64px;
+      }
+      img{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .infoBlockOffer{
+    display: flex;
+
+    .youTubeLink{
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      img{
+        padding-right: 10px ;
+      }
+      a{
+        font-family: 'Chivo', sans-serif;
+        font-size: 16px;
+        line-height: 26px;
+        color: #13AA57;
+        font-weight: bold;
+      }
+
+    }
+
+    .iconWrapper{
+      margin-right: 16px;
+
+      .line{
+        border-right: 3px solid #263238;
+        height: 125px;
+      }
+      .line.a{
+        width: 50%
+      }
+      .line.b{
+        width: 45%
+      }
+      .line.c{
+        width: 50%;
+        margin-top: 4px;
+      }
+      .line.d{
+        width: 40%;
+        margin-top: -5px;
+      }
+      .line.e{
+        width: 50%
+      }
+
+    }
+  }
+  .textInfo{
+    font-family: 'Chivo', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 26px;
+    color: #263238;
+    margin-top: 25px;
+  }
+  .titleInfo{
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #263238;
+    margin-top: 8px;
+  }
+
+  .extend {
+    grid-column: 1/3;
+  }
+}
+

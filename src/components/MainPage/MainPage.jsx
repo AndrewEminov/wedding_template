@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 
 import  './mainPage_styles.scss';
 import ContentAbout from "./Content/ContentAbout";
+import ContentOffer from "./Content/ContentOffer";
 
 function MainPage() {
 
@@ -11,8 +12,8 @@ function MainPage() {
             <Header/>
             <div className={'content'}>
                 <ContentAbout/>
+                <ContentOffer/>
 
-                <div className={'content offer'}></div>
                 {/*<div className={'content portfolio'}></div>*/}
                 {/*<div className={'content testimonials'}></div>*/}
                 {/*<div className={'content contact_us'}></div>*/}
