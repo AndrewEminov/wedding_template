@@ -4,8 +4,6 @@ import TextComponent from "../../common/TextComponent";
 
 import YouTube from "../../../images/offerIcons/youtube-black 1.png";
 
-import './contentOffer.scss';
-
 
 function InfoBlockOffer({OfferClass, TitleClass, TextClass, imgSrc, TitleContent, TextContent, link, lineClass, extendInfoBlock}) {
     return (

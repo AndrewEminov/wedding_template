@@ -2,7 +2,6 @@ import React from 'react';
 import ImageComponent from "../../common/ImageComponent";
 import AboutImage from "../../../images/About Us Image.jpg";
 
-import './contentAbout.scss';
 import TextComponent from "../../common/TextComponent";
 import TitleComponent from "../../common/TitleComponent";
 import BtnComponent from "../../common/BtnComponent";

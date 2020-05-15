@@ -9,7 +9,6 @@ import ShapeCircle from "../../../images/offerIcons/shape-circle 1.svg";
 import TapHand from "../../../images/offerIcons/tap-hand-gesture-touch-double-tap 1.svg";
 import VideoCamera from "../../../images/offerIcons/video-camera 1.svg";
 import OfferImage from "../../../images/What we offer image.jpg";
-import './contentOffer.scss';
 import BtnComponent from "../../common/BtnComponent";
 
 
